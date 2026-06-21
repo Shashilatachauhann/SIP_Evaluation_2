@@ -112,13 +112,14 @@ body{
 .container {
     display: grid;
     grid-template-columns: 250px 1fr 380px;
-    min-height:100vh;
+    min-height: 100vh;
+    transition: 0.3s;
 }
 .leftside{
     height: 100vh;
     width: 255px;
     padding: 10px;
-    overflow-x: hidden ;
+    overflow: hidden ;
 }
 .sidebar {
     position:fixed;
@@ -489,4 +490,53 @@ main{
     flex-wrap: wrap;
     gap: 5px;
 
+}
+.container.sidebar-hidden {
+    grid-template-columns: 0 1fr 380px;
+}
+
+.leftside {
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.leftside.hide {
+    opacity: 0;
+    width: 0;
+    padding: 0;
+}
+.Explore{
+    display: none;
+    position: absolute;
+    top: 55px;
+    left: 30px;
+    width: 300px;
+    background: white;
+    border-radius: 6px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.12); 
+}
+
+.Explore::before{
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: 30px;
+    width: 16px;
+    height: 16px;
+    background: white;
+    transform: rotate(45deg);
+}
+
+.search_con{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+    cursor: pointer;
+}
+
+.search_con span{
+    flex: 1;
+    margin-left: 15px;
+    font-size: 14px;
 }

@@ -7,15 +7,23 @@
     <title>Medium</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
 </head>
 
 <body>
     <nav class="navbar">
-        <i class="fas fa-bars bar"></i>
+        <i class="fas fa-bars bar" onclick="toggleSidebar()"></i>
         <h1 class="logo">Medium</h1>
         <div class="search">
             <i class="fa-solid fa-magnifying-glass icon"></i>
-            <input type="text" placeholder="Search">
+            <input type="text" placeholder="Search" onclick="openSearch()">
+                <div class="Explore" id="search_ex">
+        <div class="search_con">
+            <i class="fa-regular fa-compass"></i>
+            <span>Explore topics</span>
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </div>
+    </div>
         </div>
         <button class="getapp">
             <i class="fa-solid fa-qrcode"></i>
@@ -508,7 +516,7 @@
         </div>
         </aside>
     </div>
-
+ <script src="medium.js"></script>
 </body>
 
 </html>
