@@ -95,6 +95,9 @@ body{
     color: rgb(88, 88, 88);
     font-weight: 200;
 }
+.write a:hover{
+    color:#000;
+}
 .bell {
     font-size: 20px;
     position: relative;
